@@ -11,7 +11,7 @@ yarn or npm install
 ## Activate JSON server
 
 ```bash
-yarn add global json-server or npm i -g json-server
+yarn global add json-server or npm i -g json-server
 ```
 
 After, go to the root of project and run:
