@@ -18,12 +18,10 @@ function MainCard({ date, category, title, content, idUser }: Card) {
   useEffect(() => {
     ;(async () => {
       if (idUser) {
-        console.log(idUser)
         const { data: userData }: { data: Array<User> } = await api.get(
           `/user?id=${idUser}`
         )
 
-        console.log(userData)
         setUser(userData[0])
       }
     })()

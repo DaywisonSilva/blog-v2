@@ -15,22 +15,28 @@ import { useState, useEffect } from 'react'
 
 function Home() {
   const [main, setMain] = useState<Array<Post>>([])
-  const [mostSeen, setMostSeen] = useState([])
+  const [mostSeen, setMostSeen] = useState<Array<Post>>([])
   const [banner, setBanner] = useState<Post>()
 
   const endpoints = [
     'posts?star=5&_limit=2&_order=desc',
-    'posts?sort=date&_order=desc&_limit=1'
+    'posts?sort=date&_order=desc&_limit=1',
+    'posts?_limit=3'
   ]
 
   useEffect(() => {
     ;(async () => {
-      const [{ data: mainData }, { data: bannerData }]: Array<{
+      const [
+        { data: mainData },
+        { data: bannerData },
+        { data: mostSeenData }
+      ]: Array<{
         data: Array<Post>
       }> = await axios.all(endpoints.map((endpoint) => api.get(endpoint)))
 
       setMain(mainData)
       setBanner(bannerData[0])
+      setMostSeen(mostSeenData)
     })()
   }, [])
 
@@ -73,11 +79,30 @@ function Home() {
         <section className='container'>
           <h3 className='ml-2 mb-3'>Mais vistos</h3>
           <div className='row'>
-            <Card />
+            {mostSeen.map((post) => {
+              return (
+                <Card
+                  key={post.id}
+                  title={post.title}
+                  category={post.category}
+                  content={post.content}
+                  date={post.date}
+                  imageUrl={post.imageUrl}
+                  resume={post.resume}
+                />
+              )
+            })}
           </div>
         </section>
       </div>
-      <Banner />
+      <Banner
+        category={banner?.category || ''}
+        content={banner?.content || ''}
+        date={banner?.date || ''}
+        imageUrl={banner?.imageUrl || ''}
+        resume={banner?.resume || ''}
+        title={banner?.title || ''}
+      />
     </>
   )
 }
