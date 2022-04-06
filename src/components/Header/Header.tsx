@@ -1,4 +1,5 @@
 import * as React from 'react'
+import { Link } from 'react-router-dom'
 
 function Header() {
   return (
@@ -6,25 +7,20 @@ function Header() {
       <header className='py-1 px-2'>
         <nav>
           <div className='logo'>
-            <a href='#'>
+            <Link to='/'>
               <img src='svg/blog-logo.svg' alt='' />
-            </a>
+            </Link>
           </div>
           <ul className='menu'>
             <li>
-              <a href='#' className='p-1'>
-                Categorias
-              </a>
-            </li>
-            <li>
-              <a href='#' className='p-1'>
+              <Link to='/about' className='p-1'>
                 Sobre
-              </a>
+              </Link>
             </li>
             <li>
-              <a href='#' className='p-1'>
+              <Link to='/contact' className='p-1'>
                 Contato
-              </a>
+              </Link>
             </li>
           </ul>
         </nav>
@@ -43,14 +39,14 @@ function Header() {
             </form>
           </div>
           <div className='cta-desktop ml-3'>
-            <a href='#' className='btn'>
+            <Link to='/login' className='btn'>
               Login
-            </a>
+            </Link>
           </div>
           <div className='cta-mobile mr-1'>
-            <a href='#' className='link'>
+            <Link to='/login' className='link'>
               Login
-            </a>
+            </Link>
           </div>
         </div>
       </header>
@@ -58,11 +54,6 @@ function Header() {
       <div className='relative'>
         <div className='menu-mobile'>
           <ul className='nav-mobile'>
-            <li>
-              <a href='#' className='link-menu-mobile'>
-                Categorias
-              </a>
-            </li>
             <li>
               <a href='#' className='link-menu-mobile'>
                 Sobre

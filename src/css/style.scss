@@ -1,4 +1,4 @@
-*{
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -8,42 +8,44 @@
 @import 'sass/layout';
 @import 'sass/spacing';
 @import 'sass/typography';
+@import 'sass/routes';
 
-html{
+html {
   scroll-behavior: smooth;
 }
 
-body{
+body {
   width: 100%;
   position: relative;
 
   background-color: $black-dark;
 
-  &::-webkit-scrollbar{
+  &::-webkit-scrollbar {
     padding-right: 2px;
     width: 8px;
     background: transparent;
   }
 
-  &::-webkit-scrollbar-thumb{
+  &::-webkit-scrollbar-thumb {
     border-radius: 8px;
     background: $black-light;
   }
 }
 
-.border{
+.border {
   border: 1px solid red;
 }
 
-.hidden{
+.hidden {
   overflow: hidden;
 }
 
-.relative{
+.relative {
   position: relative;
 }
 
-svg,img{
+svg,
+img {
   width: 100%;
   //height: auto;
 }
@@ -51,4 +53,3 @@ svg,img{
 @import 'sass/menu';
 @import 'sass/icons';
 @import 'sass/buttons';
-

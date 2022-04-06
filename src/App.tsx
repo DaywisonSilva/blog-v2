@@ -1,16 +1,16 @@
 import * as React from 'react'
 
 //  Components
-import Home from 'pages/Home'
-import Header from '@components/Header'
-import Footer from '@components/Footer'
+// import Header from '@components/Header'
+// import Footer from '@components/Footer'
+
+// Routes
+import Routes from './routes'
 
 function App() {
   return (
     <>
-      <Header />
-      <Home />
-      <Footer />
+      <Routes></Routes>
     </>
   )
 }
