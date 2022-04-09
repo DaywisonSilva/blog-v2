@@ -12,7 +12,7 @@ function Hero() {
             Um blog para todos. Escrever. Ler. Comentar. Contribuir. Aprender.
             Conectar.
           </p>
-          <a href='#' className='btn mt-2'>
+          <a href='#' className='btn mt-2' onClick={(e) => e.preventDefault()}>
             Começar a escrever
           </a>
         </div>

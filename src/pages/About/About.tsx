@@ -12,7 +12,7 @@ function About() {
             O Blog é um projeto em React.js desenvolvido para o curso FrontPUSH.
             Clique abaixo para saber de mais informações.
           </p>
-          <a href='' className='btn mt-2'>
+          <a href='#' className='btn mt-2' onClick={(e) => e.preventDefault()}>
             Saber mais
           </a>
         </div>
