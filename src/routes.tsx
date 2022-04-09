@@ -31,7 +31,6 @@ const AppRoutes = () => {
 
   return (
     <>
-      <Header />
       <TransitionGroup component={null}>
         <CSSTransition key={location.key} classNames='route' timeout={400}>
           <Routes location={location} key={location.key}>
@@ -48,7 +47,6 @@ const AppRoutes = () => {
           </Routes>
         </CSSTransition>
       </TransitionGroup>
-      <Footer />
     </>
   )
 }
