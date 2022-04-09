@@ -5,4 +5,4 @@
 /post     / 200
 /profile  / 200
 /search   / 200
-/*        / error 200
+/*        / 200
