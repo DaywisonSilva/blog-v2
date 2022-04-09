@@ -4,7 +4,7 @@ function NotFound() {
   return (
     <section className='container'>
       <div className='row flex-center'>
-        <img src='svg/blog-logo2.svg' className='icon-l' alt='logo blog' />
+        <img src='/svg/blog-logo2.svg' className='icon-l' alt='logo blog' />
       </div>
 
       <div className='row'>

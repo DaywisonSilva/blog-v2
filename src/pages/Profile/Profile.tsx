@@ -2,7 +2,7 @@ import * as React from 'react'
 
 function Profile() {
   return (
-    <>
+    <div>
       <section className='container'>
         <div className='row'>
           <div className='grid-6'>
@@ -37,11 +37,11 @@ function Profile() {
         <div className='row p-0'>
           <div className='grid-3 p-0'>
             <h6 className='mb-1'>Data</h6>
-            <input type='date' name='data' id='' />
+            <input type='date' name='data' />
           </div>
           <div className='grid-3 p-0'>
             <h6 className='mb-1'>Categoria</h6>
-            <select name='' id=''>
+            <select name=''>
               <option value='TECNOLOGIA'>Tecnologia</option>
               <option value='GAMES'>Games</option>
               <option value='FOTOGRAFIA'>Fotografia</option>
@@ -50,18 +50,18 @@ function Profile() {
           </div>
           <div className='grid-6 p-0'>
             <h6 className='mb-1'>Título</h6>
-            <input type='text' name='title' id='' />
+            <input type='text' name='title' />
           </div>
         </div>
 
         <div className='row p-0'>
           <div className='grid-8 p-0'>
             <h6 className='mb-1'>Resumo do post</h6>
-            <input type='text' name='title' id='' />
+            <input type='text' name='title' />
           </div>
           <div className='grid-4 p-0'>
             <h6 className='mb-1'>Duração de leitura</h6>
-            <select name='' id=''>
+            <select name=''>
               <option value='5'>5 min.</option>
               <option value='7'>7 min.</option>
               <option value='10'>10 min.</option>
@@ -73,7 +73,7 @@ function Profile() {
         <div className='row p-0'>
           <div className='grid-12 p-0'>
             <h6 className='mb-1'>Descrição</h6>
-            <textarea name='description' id='' rows={8}></textarea>
+            <textarea name='description' rows={8}></textarea>
           </div>
         </div>
 
@@ -81,7 +81,7 @@ function Profile() {
           <button className='btn'>Adicionar</button>
         </div>
       </section>
-    </>
+    </div>
   )
 }
 

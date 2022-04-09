@@ -8,7 +8,7 @@ function Header() {
         <nav>
           <div className='logo'>
             <Link to='/'>
-              <img src='svg/blog-logo.svg' alt='' />
+              <img src='/svg/blog-logo.svg' alt='' />
             </Link>
           </div>
           <ul className='menu'>
@@ -31,7 +31,6 @@ function Header() {
               <input
                 type='text'
                 name='search'
-                id=''
                 placeholder='Buscar...'
                 autoComplete='new-password'
               />
@@ -66,12 +65,7 @@ function Header() {
             </li>
             <li className='py-2 pl-2'>
               <form className='flex'>
-                <input
-                  type='text'
-                  name='search'
-                  id=''
-                  placeholder='Buscar...'
-                />
+                <input type='text' name='search' placeholder='Buscar...' />
                 <button className='btn-search'></button>
               </form>
             </li>

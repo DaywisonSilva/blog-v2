@@ -46,7 +46,7 @@ function Home() {
       <section className='container'>
         <div className='row'>
           <div className='grid-5 pt-5 pb-3 bb-black'>
-            <img src='svg/icon-star.svg' alt='blog icon' className='icon-l' />
+            <img src='/svg/icon-star.svg' alt='blog icon' className='icon-l' />
             <a href='#' className='link-title'>
               <h2 className='mt-1'>
                 Os melhores e mais bem votados posts do mês.
@@ -66,7 +66,8 @@ function Home() {
                   category={post.category}
                   content={post.content}
                   date={post.date}
-                  idUser={post.id_user}
+                  userId={post.id_user}
+                  postId={post.id}
                   title={post.title}
                 />
               )

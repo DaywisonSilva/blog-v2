@@ -18,7 +18,7 @@ function Hero() {
         </div>
         <div className='grid-1'></div>
         <div className='grid-6 flex-center'>
-          <img src='svg/blog.svg' style={{ maxWidth: '360px' }} alt='#' />
+          <img src='/svg/blog.svg' style={{ maxWidth: '360px' }} alt='#' />
         </div>
         <div className='grid-1'></div>
       </div>

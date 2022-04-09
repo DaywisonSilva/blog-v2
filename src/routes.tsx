@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React, { useEffect, useRef } from 'react'
 import {
   BrowserRouter,
   Route,
@@ -23,30 +23,34 @@ import {
 // Components
 import Header from '@components/Header'
 import Footer from '@components/Footer'
-import { MainLayout } from 'layouts'
 
 const AppRoutes = () => {
   const location = useLocation()
   const nodeRef = useRef()
 
+  useEffect(() => {
+    document.body.scrollTop = 0 // For Safari
+    document.documentElement.scrollTop = 0
+  }, [location])
+
   return (
     <>
-      <TransitionGroup component={null}>
+      <Header />
+      <TransitionGroup component={null} appear={true}>
         <CSSTransition key={location.key} classNames='route' timeout={400}>
-          <Routes location={location} key={location.key}>
-            <Route path='/' element={<MainLayout />}>
-              <Route index element={<Home />} />
-              <Route path='/about' element={<About />} />
-              <Route path='/contact' element={<Contact />} />
-              <Route path='/login' element={<Login />} />
-              <Route path='/post' element={<Post />} />
-              <Route path='/profile' element={<Profile />} />
-              <Route path='/search' element={<Search />} />
-              <Route path='*' element={<NotFound />} />
-            </Route>
+          <Routes location={location}>
+            <Route index element={<Home />} />
+            <Route path='/about' element={<About />} />
+            <Route path='/contact' element={<Contact />} />
+            <Route path='/login' element={<Login />} />
+            <Route path='/post/:idPost' element={<Post />} />
+            <Route path='/profile' element={<Profile />} />
+            <Route path='/search' element={<Search />} />
+            <Route path='*' element={<NotFound />} />
           </Routes>
         </CSSTransition>
       </TransitionGroup>
+      <Footer />
     </>
   )
 }

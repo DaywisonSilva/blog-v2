@@ -6,7 +6,7 @@ function Footer() {
       <section className='container pb-0'>
         <div className='row flex-center'>
           <img
-            src='svg/blog-logo2.svg'
+            src='/svg/blog-logo2.svg'
             style={{
               maxWidth: '96px'
             }}
@@ -80,10 +80,10 @@ function Footer() {
           </div>
 
           <div className='grid-3'>
-            <img src='svg/icon-facebook.svg' className='icon-s' alt='' />
-            <img src='svg/icon-instagram.svg' className='icon-s ml-2' alt='' />
-            <img src='svg/icon-youtube.svg' className='icon-s ml-2' alt='' />
-            <img src='svg/icon-twitter.svg' className='icon-s ml-2' alt='' />
+            <img src='/svg/icon-facebook.svg' className='icon-s' alt='' />
+            <img src='/svg/icon-instagram.svg' className='icon-s ml-2' alt='' />
+            <img src='/svg/icon-youtube.svg' className='icon-s ml-2' alt='' />
+            <img src='/svg/icon-twitter.svg' className='icon-s ml-2' alt='' />
           </div>
         </div>
       </section>

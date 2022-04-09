@@ -8,7 +8,7 @@ function Post() {
 
       <div className='flex-center my-3'>
         <div className='profile'>
-          <img src='profile/ny.jpg' className='profile-img' alt='' />
+          <img src='/profile/ny.jpg' className='profile-img' alt='' />
         </div>
         <div className='ml-2'>
           <h6 className='color-primary'>Násser Yousef Ali</h6>
@@ -18,7 +18,7 @@ function Post() {
       </div>
 
       <div className='img-banner hidden'>
-        <img src='img/05.png' alt='' />
+        <img src='/img/05.png' alt='' />
       </div>
 
       <div className='row my-3'>
@@ -40,7 +40,7 @@ function Post() {
           <div className='row'>
             <div className='grid-3 flex-center pl-1'>
               <div className='profile-big'>
-                <img src='profile/ny.jpg' className='profile-img' alt='' />
+                <img src='/profile/ny.jpg' className='profile-img' alt='' />
               </div>
             </div>
             <div className='grid-9'>

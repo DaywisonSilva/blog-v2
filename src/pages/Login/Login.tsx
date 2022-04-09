@@ -4,7 +4,7 @@ function Login() {
   return (
     <section className='container'>
       <div className='row flex-center'>
-        <img src='svg/blog-logo2.svg' className='icon-l' alt='blog logo' />
+        <img src='/svg/blog-logo2.svg' className='icon-l' alt='blog logo' />
       </div>
 
       <div className='row'>
@@ -16,14 +16,12 @@ function Login() {
             type='text'
             className='mt-2'
             name='user'
-            id=''
             placeholder='Digite seu usuário'
           />
           <input
             type='password'
             className='mt-1'
             name='password'
-            id=''
             placeholder='Digite sua senha'
           />
 
