@@ -89,6 +89,7 @@ function Home() {
                   content={post.content}
                   date={post.date}
                   imageUrl={post.imageUrl}
+                  postId={post.id}
                   resume={post.resume}
                 />
               )
@@ -103,6 +104,7 @@ function Home() {
         imageUrl={banner?.imageUrl || ''}
         resume={banner?.resume || ''}
         title={banner?.title || ''}
+        postId={banner?.id || 0}
       />
     </>
   )

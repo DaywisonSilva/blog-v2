@@ -45,7 +45,7 @@ function Post() {
       </div>
 
       <div className='img-banner hidden'>
-        <img src='/img/05.png' alt='' />
+        <img src={post?.imageUrl} alt='' />
       </div>
 
       <div className='row my-3'>
