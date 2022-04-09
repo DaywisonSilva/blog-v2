@@ -23,6 +23,7 @@ import {
 // Components
 import Header from '@components/Header'
 import Footer from '@components/Footer'
+import { MainLayout } from 'layouts'
 
 const AppRoutes = () => {
   const location = useLocation()
@@ -33,15 +34,17 @@ const AppRoutes = () => {
       <Header />
       <TransitionGroup component={null}>
         <CSSTransition key={location.key} classNames='route' timeout={400}>
-          <Routes location={location}>
-            <Route path='/' element={<Home />} />
-            <Route path='/about' element={<About />} />
-            <Route path='/contact' element={<Contact />} />
-            <Route path='/login' element={<Login />} />
-            <Route path='/post' element={<Post />} />
-            <Route path='/profile' element={<Profile />} />
-            <Route path='/search' element={<Search />} />
-            <Route path='*' element={<NotFound />} />
+          <Routes location={location} key={location.key}>
+            <Route path='/' element={<MainLayout />}>
+              <Route index element={<Home />} />
+              <Route path='/about' element={<About />} />
+              <Route path='/contact' element={<Contact />} />
+              <Route path='/login' element={<Login />} />
+              <Route path='/post' element={<Post />} />
+              <Route path='/profile' element={<Profile />} />
+              <Route path='/search' element={<Search />} />
+              <Route path='*' element={<NotFound />} />
+            </Route>
           </Routes>
         </CSSTransition>
       </TransitionGroup>
