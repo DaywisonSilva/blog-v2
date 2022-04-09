@@ -61,7 +61,6 @@ function Footer() {
               <input
                 type='text'
                 name='search'
-                id=''
                 placeholder='Digite seu e-mail aqui'
               />
               <button className='btn ml-2'>Cadastrar</button>

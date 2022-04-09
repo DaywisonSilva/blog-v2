@@ -29,7 +29,7 @@ const AppRoutes = () => {
   const nodeRef = useRef()
 
   useEffect(() => {
-    document.body.scrollTop = 0 // For Safari
+    document.body.scrollTop = 0
     document.documentElement.scrollTop = 0
   }, [location])
 
