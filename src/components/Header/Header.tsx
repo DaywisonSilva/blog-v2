@@ -30,6 +30,11 @@ function Header() {
           </div>
           <ul className='menu'>
             <li>
+              <Link to='/' className='p-1'>
+                Início
+              </Link>
+            </li>
+            <li>
               <Link to='/about' className='p-1'>
                 Sobre
               </Link>
@@ -74,6 +79,15 @@ function Header() {
       <div className='relative'>
         <div className={`menu-mobile ${show ? 'showmenu' : ''}`}>
           <ul className='nav-mobile'>
+            <li>
+              <Link
+                to='/'
+                className='link-menu-mobile'
+                onClick={() => setShow(!show)}
+              >
+                Início
+              </Link>
+            </li>
             <li>
               <Link
                 to='/about'
