@@ -41,7 +41,10 @@ function Header() {
             </li>
           </ul>
         </nav>
-        <div className='bx' onClick={() => setShow(!show)}></div>
+        <div
+          className={`bx ${show ? 'activebx' : ''}`}
+          onClick={() => setShow(!show)}
+        ></div>
         <div className='flex-start-row'>
           <div className='search'>
             <form className='flex' onSubmit={(e) => handleSubmit(e)}>
