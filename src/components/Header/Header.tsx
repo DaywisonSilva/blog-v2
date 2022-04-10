@@ -11,7 +11,12 @@ function Header() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    navigate('search/' + refInputDesktop.current?.value)
+    if (window.innerWidth > 960) {
+      navigate('search/' + refInputDesktop.current?.value)
+    } else {
+      setShow(false)
+      navigate('search/' + refInputMobile.current?.value)
+    }
   }
 
   return (
