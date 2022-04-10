@@ -1,7 +1,19 @@
-import * as React from 'react'
-import { Link } from 'react-router-dom'
+import React, { useRef, useState } from 'react'
+import { Link, useNavigate } from 'react-router-dom'
 
 function Header() {
+  //  state
+  const [show, setShow] = useState(false)
+
+  const navigate = useNavigate()
+  const refInputDesktop = useRef<HTMLInputElement>(null)
+  const refInputMobile = useRef<HTMLInputElement>(null)
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault()
+    navigate('search/' + refInputDesktop.current?.value)
+  }
+
   return (
     <>
       <header className='py-1 px-2'>
@@ -24,17 +36,18 @@ function Header() {
             </li>
           </ul>
         </nav>
-        <div className='bx'></div>
+        <div className='bx' onClick={() => setShow(!show)}></div>
         <div className='flex-start-row'>
           <div className='search'>
-            <form className='flex'>
+            <form className='flex' onSubmit={(e) => handleSubmit(e)}>
               <input
                 type='text'
                 name='search'
                 placeholder='Buscar...'
                 autoComplete='new-password'
+                ref={refInputDesktop}
               />
-              <button className='btn-search'></button>
+              <button className='btn-search' type='submit'></button>
             </form>
           </div>
           <div className='cta-desktop ml-3'>
@@ -51,22 +64,35 @@ function Header() {
       </header>
 
       <div className='relative'>
-        <div className='menu-mobile'>
+        <div className={`menu-mobile ${show ? 'showmenu' : ''}`}>
           <ul className='nav-mobile'>
             <li>
-              <a href='#' className='link-menu-mobile'>
+              <Link
+                to='/about'
+                className='link-menu-mobile'
+                onClick={() => setShow(!show)}
+              >
                 Sobre
-              </a>
+              </Link>
             </li>
             <li>
-              <a href='#' className='link-menu-mobile'>
+              <Link
+                to='/contact'
+                className='link-menu-mobile'
+                onClick={() => setShow(!show)}
+              >
                 Contato
-              </a>
+              </Link>
             </li>
             <li className='py-2 pl-2'>
-              <form className='flex'>
-                <input type='text' name='search' placeholder='Buscar...' />
-                <button className='btn-search'></button>
+              <form className='flex' onSubmit={(e) => handleSubmit(e)}>
+                <input
+                  type='text'
+                  name='search'
+                  placeholder='Buscar...'
+                  ref={refInputMobile}
+                />
+                <button className='btn-search' type='submit'></button>
               </form>
             </li>
           </ul>

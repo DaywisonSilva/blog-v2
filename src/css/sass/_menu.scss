@@ -1,4 +1,4 @@
-header{
+header {
   width: 100%;
   height: 80px;
 
@@ -13,36 +13,35 @@ header{
 
   position: fixed;
   z-index: 990;
-
 }
 
-nav{
+nav {
   display: flex;
   justify-content: flex-start;
   align-items: center;
 }
 
-.menu{
+.menu {
   list-style: none;
 
   display: flex;
 
-  li{
+  li {
     margin-left: 24px;
   }
 
-  @include responsive(s){
+  @include responsive(s) {
     display: none;
   }
 }
 
-.search{
-  @include responsive(s){
+.search {
+  @include responsive(s) {
     display: none;
   }
 }
 
-.bx{
+.bx {
   width: 40px;
   height: 40px;
   cursor: pointer;
@@ -50,13 +49,13 @@ nav{
   border-radius: 4px;
 
   display: none;
-  @include responsive(s){
+  @include responsive(s) {
     display: block;
   }
 
   position: relative;
 
-  &::after{
+  &::after {
     content: '';
     position: absolute;
     top: 35%;
@@ -68,12 +67,12 @@ nav{
     width: 70%;
     height: 2px;
     display: block;
-    transition: .5s ease;
+    transition: 0.5s ease;
 
     background-color: $white-dark;
   }
 
-  &::before{
+  &::before {
     content: '';
     position: absolute;
     top: 65%;
@@ -85,17 +84,16 @@ nav{
     width: 70%;
     height: 2px;
     display: block;
-    transition: .5s ease;
+    transition: 0.5s ease;
 
     background-color: $white-dark;
   }
 }
 
-.bx.activebx{
-
+.bx.activebx {
   position: relative;
 
-  &::after{
+  &::after {
     content: '';
     position: absolute;
     top: 50%;
@@ -111,7 +109,7 @@ nav{
     background-color: $white-dark;
   }
 
-  &::before{
+  &::before {
     content: '';
     position: absolute;
     top: 50%;
@@ -128,29 +126,29 @@ nav{
   }
 }
 
-.cta-mobile{
+.cta-mobile {
   display: none;
-  @include responsive(s){
+  @include responsive(s) {
     display: block;
   }
 }
 
-.cta-desktop{
+.cta-desktop {
   display: block;
-  @include responsive(s){
+  @include responsive(s) {
     display: none;
   }
 }
 
-.logo{
+.logo {
   max-width: 64px;
   min-width: 48px;
 }
 
-.menu-mobile{
+.menu-mobile {
   width: 100%;
   height: 100vh;
-  transition: .7s ease;
+  transition: 0.7s ease;
 
   position: absolute;
   top: 0;
@@ -161,21 +159,21 @@ nav{
 
   z-index: 900;
 
-  .nav-mobile{
+  .nav-mobile {
     margin-top: 80px;
   }
 
-  li{
+  li {
     border-bottom: 1px solid $black-light;
 
-    .link-menu-mobile{
+    .link-menu-mobile {
       display: inline-block;
       width: 100%;
       height: 100%;
       padding: 24px 16px 24px 16px;
-      transition: .5s ease;
+      transition: 0.5s ease;
 
-      &:hover{
+      &:hover {
         background-color: rgba(15, 20, 31, 0.7);
         padding: 24px 16px 24px 28px;
       }
@@ -183,7 +181,7 @@ nav{
   }
 }
 
-.menu-mobile.showmenu{
+.menu-mobile.showmenu {
   width: 100%;
   height: 100vh;
 
@@ -193,6 +191,9 @@ nav{
   top: 0;
   left: 0;
 
-  transition: .7s ease;
+  transition: 0.7s ease;
 
+  @media screen and (min-width: 961px) {
+    display: none;
+  }
 }
